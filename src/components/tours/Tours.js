@@ -1,16 +1,12 @@
 import './Tours.css';
-
-const data =require('../../data/db.json')
+import Tour from './Tour/Tour';
+const data =require('..//..//data/db.json')
 function Tours(){
     return(
-        <div className='tours'>
+        <div className='tour'>
         {data.map(element=>{
             return (
-                <div key={element.id}>
-
-                    <h3>{element.name}</h3>
-                    <img src={element.image} alt={element.name}/>
-                </div>
+                <Tour name={element.name} image={element.image}/>
             )
         })}
         </div>
